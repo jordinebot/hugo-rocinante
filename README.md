@@ -22,7 +22,7 @@ The only javascript in the theme is for an optional enhancement to Email link, w
 
 Inside the folder of your Hugo site run:
 
-    $ git submodule add https://github.com/mavidser/hugo-rocinante.git themes/rocinante
+    $ git submodule add git@github.com:jordinebot/hugo-rocinante.git themes/rocinante
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
