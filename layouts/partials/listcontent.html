@@ -23,13 +23,13 @@
     {{ if eq .Type "photos" }}
         {{ if gt (len .Resources) 1 }}
             <div class="read-more">
-                <a href="{{ .RelPermalink }}">See {{ len .Resources }} photos ›</a>
+                <a href="{{ .RelPermalink }}">Veure les {{ len .Resources }} fotos ›</a>
             </div>
         {{ end }}
     {{ else }}
         {{ if .Truncated }}
             <div class="read-more">
-                <a href="{{ .RelPermalink }}">Read more ›</a>
+                <a href="{{ .RelPermalink }}">Llegir-ne més ›</a>
             </div>
         {{ end }}
     {{ end }}
