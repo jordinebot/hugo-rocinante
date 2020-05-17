@@ -9,7 +9,7 @@
             <div class="date"><h5>{{ .Params.display_date }}</h5></div><div class="location"><h5>{{ .Params.location }}</h5></div>
         </div>
         {{ else }}
-        <div class="date"><h5>{{ .Params.date.Format "Jan 02, 2006" }}</h5></div>
+        <div class="date"><h5>{{ .Date.Day }} {{ index $.Site.Data.mesos (printf "%d" .Date.Month) }} {{ .Date.Year }}</h5></div>
         {{ end }}
     </div class="title-group">
 
