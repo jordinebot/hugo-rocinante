@@ -14,7 +14,7 @@
     </div class="title-group">
 
     <div class="content">
-        {{ .Summary | safeHTML }}
+        {{ .Content }}
         {{ if and (eq .Type "photos") (.Params.banner) }}
         {{ $image := (.Resources.GetMatch .Params.banner).Resize "700x q100" }}
         <p><a href="{{.RelPermalink}}"><img src="{{ $image.RelPermalink }}"></a></p>
@@ -24,12 +24,6 @@
         {{ if gt (len .Resources) 1 }}
             <div class="read-more">
                 <a href="{{ .RelPermalink }}">Veure les {{ len .Resources }} fotos ›</a>
-            </div>
-        {{ end }}
-    {{ else }}
-        {{ if .Truncated }}
-            <div class="read-more">
-                <a href="{{ .RelPermalink }}">Llegir-ne més ›</a>
             </div>
         {{ end }}
     {{ end }}
